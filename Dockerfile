@@ -16,6 +16,7 @@ ARG QEMU_CPU
 COPY rootfs /
 
 COPY --from=ghcr.io/alexxit/go2rtc:1.9.11 /usr/local/bin/go2rtc /bin/go2rtc
+RUN go2rtc --version
 
 # Install uv
 RUN pip3 install uv==0.9.5
